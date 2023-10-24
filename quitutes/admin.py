@@ -1,3 +1,9 @@
 from django.contrib import admin
+from quitutes.models import Doce
 
-# Register your models here.
+
+class DoceAdmin(admin.ModelAdmin):
+    list_display = ('nome','valor','peso','categoria','ativo')
+
+
+admin.site.register(Doce,DoceAdmin)
